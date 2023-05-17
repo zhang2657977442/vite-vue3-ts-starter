@@ -23,7 +23,7 @@ npm preview // 预览
 - [√Axios 封装及接口管理](#axios)
 - [√ 配置 proxy 跨域](#proxy)
 - [√ Element Plus 自动按需引入](#element)
-- [√Markdown预览](markdown)
+- [√Markdown预览](#markdown)
 - [√ Eslint + Prettier 统一开发规范](#prettier)
 
 ## <span id="ip">✅ 配置 ip 访问项目 </span>
