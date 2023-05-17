@@ -10,6 +10,7 @@ npm run dev // 开发
 npm run build // 打包
 npm run preview // 预览
 ```
+![](https://github.com/zhang2657977442/MyPicGo/blob/master/vite-vue3-ts-starter/%E6%88%AA%E5%9B%BE1.png)
 
 ## 功能集成
 
