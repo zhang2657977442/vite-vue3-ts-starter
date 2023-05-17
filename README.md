@@ -6,9 +6,9 @@
 
 ```bash
 npm install // 安装依赖
-npm dev // 开发
-npm build // 打包
-npm preview // 预览
+npm run dev // 开发
+npm run build // 打包
+npm run preview // 预览
 ```
 
 ## 功能集成
