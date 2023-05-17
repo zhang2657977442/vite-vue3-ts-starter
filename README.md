@@ -144,7 +144,7 @@ interface ImportMeta {
    使用`dart-sass`, 安装速度比较快，大概率不会出现安装不成功
 
 ```js
-pnpm i -D sass
+npm i -D sass
 ```
 
 2. 使用
@@ -185,7 +185,7 @@ css: {
 - 解决方法：安装@types/node
 
 ```js
-pnpn i -D @types/node
+npn i -D @types/node
 ```
 
 - 在 vite.config.js 中使用
@@ -201,8 +201,8 @@ import { resolve } from 'path'
 ### 1. 安装依赖
 
 ```ts
-pnpm install vue-router
-pnpm install vite-plugin-pages -D
+npm install vue-router
+npm install vite-plugin-pages -D
 ```
 
 ### 2. 配置自动生成路由
@@ -295,7 +295,7 @@ console.log('查看全局环境',import.meta.env);
 ### 安装依赖
 
 ```js
-pnpm i pinia
+npm i pinia
 ```
 
 ### 创建 Store
@@ -426,7 +426,7 @@ const updateUserState = () => {
 * 安装依赖
 
 ```ts
-pnpm i pinia-plugin-persistedstate
+npm i pinia-plugin-persistedstate
 ```
 
 - 引用插件
@@ -468,7 +468,7 @@ export const useUserStore = defineStore({
 ### 安装依赖
 
 ```js
-pnpm i axios
+npm i axios
 ```
 
 ### 封装Axios
@@ -576,8 +576,8 @@ export default defineConfig({
 ### 安装依赖
 
 ```bash
-pnpm i element-plus
-pnpm i -D @iconify-json/ep unplugin-auto-import unplugin-icons unplugin-vue-components
+npm i element-plus
+npm i -D @iconify-json/ep unplugin-auto-import unplugin-icons unplugin-vue-components
 ```
 
 在vite.config.ts进行如下配置
@@ -622,8 +622,8 @@ export default defineConfig({
 ### 安装依赖
 
 ```bash
-pnpm i highlight.js
-pnpm i -D vite-plugin-md
+npm i highlight.js
+npm i -D vite-plugin-md
 ```
 
 在vite.config.ts进行如下配置
@@ -677,7 +677,7 @@ import MarkDown from './index.md';
 ### 1. 安装依赖
 
 ```js
-pnpm i -D eslint eslint-plugin-vue prettier @vue/eslint-config-prettier @vue/eslint-config-typescript @rushstack/eslint-patch
+npm i -D eslint eslint-plugin-vue prettier @vue/eslint-config-prettier @vue/eslint-config-typescript @rushstack/eslint-patch
 ```
 
 ### 2. 编写相关文件
