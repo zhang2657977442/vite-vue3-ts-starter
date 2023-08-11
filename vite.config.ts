@@ -1,15 +1,15 @@
-import { defineConfig } from 'vite';
-import path from 'path';
-import vue from '@vitejs/plugin-vue';
-import Markdown from 'vite-plugin-md';
-import Pages from 'vite-plugin-pages';
-import AutoImport from 'unplugin-auto-import/vite';
-import Components from 'unplugin-vue-components/vite';
-import Icons from 'unplugin-icons/vite';
-import IconsResolver from 'unplugin-icons/resolver';
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
-import Inspect from 'vite-plugin-inspect';
-import hljs from 'highlight.js';
+import { defineConfig } from "vite";
+import path from "path";
+import vue from "@vitejs/plugin-vue";
+import Markdown from "vite-plugin-md";
+import Pages from "vite-plugin-pages";
+import AutoImport from "unplugin-auto-import/vite";
+import Components from "unplugin-vue-components/vite";
+import Icons from "unplugin-icons/vite";
+import IconsResolver from "unplugin-icons/resolver";
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import Inspect from "vite-plugin-inspect";
+import hljs from "highlight.js";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -29,42 +29,42 @@ export default defineConfig({
                 '<pre class="hljs"><code>' +
                 hljs.highlight(str, { language: lang, ignoreIllegals: true })
                   .value +
-                '</code></pre>'
+                "</code></pre>"
               );
             } catch (__) {}
           }
-          return '';
+          return "";
         },
       },
     }),
     Pages({
       pagesDir: [
         {
-          dir: 'src/views',
-          baseRoute: '',
+          dir: "src/views",
+          baseRoute: "",
         },
       ],
-      exclude: ['**/components/*.vue'],
+      exclude: ["**/components/*.vue"],
     }),
     AutoImport({
       resolvers: [
-        ElementPlusResolver(),
+        ElementPlusResolver({ importStyle: "sass" }),
         // 自动导入图标组件
         IconsResolver({
-          prefix: 'Icon',
+          prefix: "Icon",
         }),
       ],
-      dts: path.resolve(__dirname, 'types/auto-imports.d.ts'),
+      dts: path.resolve(__dirname, "types/auto-imports.d.ts"),
     }),
     Components({
       resolvers: [
-        ElementPlusResolver(),
+        ElementPlusResolver({ importStyle: "sass" }),
         // 自动注册图标组件
         IconsResolver({
-          enabledCollections: ['ep'],
+          enabledCollections: ["ep"],
         }),
       ],
-      dts: path.resolve(__dirname, 'types/components.d.ts'),
+      dts: path.resolve(__dirname, "types/components.d.ts"),
     }),
     Icons({
       autoInstall: true,
@@ -73,16 +73,16 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': '/src',
+      "@": "/src",
     },
   },
   server: {
-    host: '0.0.0.0',
+    host: "0.0.0.0",
     proxy: {
-      '/api': {
-        target: 'http://xxxxxxxxxxxxxxx',
+      "/api": {
+        target: "http://xxxxxxxxxxxxxxx",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },
@@ -90,7 +90,8 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @import "@/styles/variables.scss";
+          @use "@/styles/element.scss" as *;
+          @use "@/styles/variables.scss";
           `,
       },
     },

@@ -2,10 +2,9 @@ import http from '../service/request';
 
 const PREFIX = 'user';
 
-export const getTest = (params: any) => {
-  return http.request({
-    url: `${PREFIX}/test`,
-    method: 'post',
-    params,
+export async function getUserInfo() {
+  return http.request<BaseResponse<UserType.User>>({
+    url: `${PREFIX}/getUserInfo`,
+    method: "get",
   });
-};
+}

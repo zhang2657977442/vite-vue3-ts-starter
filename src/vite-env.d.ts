@@ -1,4 +1,5 @@
 /// <reference types="vite-plugin-pages/client" />
+/// <reference types="vite/client" />
 interface ImportMetaEnv extends Readonly<Record<string, string>> {
   readonly VITE_ENV: string; // 环境
   readonly VITE_API_BASE_URL: string; // 接口地址

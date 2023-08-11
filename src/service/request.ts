@@ -17,7 +17,7 @@ class HttpRequest {
   }
 
   // 请求拦截
-  interceptors(instance: AxiosInstance, url: string | number | undefined) {
+  interceptors(instance: AxiosInstance) {
     instance.interceptors.request.use(
       (config) => {
         // 添加全局的loading..
@@ -43,10 +43,10 @@ class HttpRequest {
     );
   }
 
-  request(options: AxiosRequestConfig) {
+  request<T>(options: AxiosRequestConfig): Promise<T> {
     const instance = axios.create();
     options = Object.assign(this.getInsideConfig(), options);
-    this.interceptors(instance, options.url);
+    this.interceptors(instance);
     return instance(options);
   }
 }

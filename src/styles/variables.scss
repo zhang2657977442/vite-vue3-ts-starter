@@ -1,5 +1,23 @@
-// variables
-$background-color: #f8f8f8;
-$theme-color: #07b0b8;
-$safe-bottom: constant(safe-area-inset-bottom);
-$safe-bottom: env(safe-area-inset-bottom);
+/* 通用颜色规范 */
+$primary: rgba(225, 37, 27, 1);
+$primary-alpha-10: rgba(225, 37, 27, 0.1);
+$primary-alpha-15: rgba(225, 37, 27, 0.15);
+$primary-alpha-20: rgba(225, 37, 27, 0.2);
+$primary-alpha-45: rgba(225, 37, 27, 0.45);
+$primary-alpha-40: rgba(225, 37, 27, 0.4);
+$primary-alpha-50: rgba(225, 37, 27, 0.5);
+
+$black: rgba(0, 0, 0, 1);
+$black-alpha-6: rgba(0, 0, 0, 0.06);
+$black-alpha-10: rgba(0, 0, 0, 0.1);
+$black-alpha-15: rgba(0, 0, 0, 0.15);
+$black-alpha-20: rgba(0, 0, 0, 0.2);
+$black-alpha-25: rgba(0, 0, 0, 0.25);
+$black-alpha-60: rgba(0, 0, 0, 0.6);
+$black-alpha-85: rgba(0, 0, 0, 0.85);
+
+$white: rgba(255, 255, 255, 1);
+
+$gorgeous-alpha-100: rgba(242, 164, 150, 1);
+
+$gorgeous-beta-100: rgba(255, 245, 242, 1);
